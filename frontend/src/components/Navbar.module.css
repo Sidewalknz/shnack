@@ -1,0 +1,79 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+  padding: 1rem 2rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: var(--brand-cream);
+  border-bottom: 2px solid var(--brand-blue);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkerboard {
+  --logo-size: 40px;
+  --cols: 8;
+  --rows: 3;
+  
+  height: var(--logo-size);
+  width: calc(var(--logo-size) * var(--cols) / var(--rows));
+  
+  background-image: repeating-conic-gradient(
+    var(--brand-blue) 0 25%,
+    var(--brand-cream) 0 50%
+  );
+  background-size: calc(100% / var(--cols)) calc(100% / var(--rows));
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--brand-blue);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--brand-blue);
+  text-decoration: underline;
+}
+
+.active {
+  text-decoration: underline;
+  font-weight: bold;
+  color: var(--brand-blue);
+}
