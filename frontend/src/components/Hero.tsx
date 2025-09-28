@@ -1,38 +1,23 @@
-import Link from 'next/link';
-import styles from './Hero.module.css';
+import Image from "next/image";
+import styles from "./Hero.module.css";
 
-export default function Hero({
-  title = 'Shnack',
-  subtitle = 'But first... a Shnack!',
-  primary = { href: '/about', label: 'Discover' },
-  secondary = { href: '/shop', label: 'Shop' },
-  right,
-}: {
-  title?: string;
-  subtitle?: string;
-  primary?: { href: string; label: string };
-  secondary?: { href: string; label: string };
-  right?: React.ReactNode; // e.g. <CanHero />
-}) {
+export default function Hero() {
   return (
-    <section className={styles.hero} aria-label="Shnack hero">
-      <div className={styles.inner}>
-        <div className={styles.copy}>
-          <h1 className={styles.title}>{title}</h1>
-          <p className={styles.subtitle}>{subtitle}</p>
-          <div className={styles.btnRow}>
-            <Link href={primary.href} className={`${styles.btn} ${styles.primary}`}>
-              {primary.label}
-            </Link>
-            <Link href={secondary.href} className={`${styles.btn} ${styles.secondary}`}>
-              {secondary.label}
-            </Link>
-          </div>
-        </div>
+    <section className={styles.hero}>
+      <div className={styles.content}>
+        <h1>But first... a Shnack!</h1>
+        <h2>YOUR NEW FAVOURITE READY TO DRINK PROTEIN SHAKE!</h2>
+        <button className={styles.cta}>Shop Now</button>
+      </div>
 
-        <div className={styles.visual}>
-          {right}
-        </div>
+      <div className={styles.imageWrapper} aria-hidden="true">
+        <Image
+          src="/images/shnack-hero.webp"
+          alt=""
+          fill
+          priority
+          className={styles.image}
+        />
       </div>
     </section>
   );

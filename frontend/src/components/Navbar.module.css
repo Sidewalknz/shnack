@@ -12,8 +12,8 @@
 }
 
 .header.scrolled {
-  background-color: var(--brand-cream);
-  border-bottom: 2px solid var(--brand-blue);
+  background-color: var(--background);
+  border-bottom: 2px solid var(--foreground);
 }
 
 .container {
@@ -39,8 +39,8 @@
   width: calc(var(--logo-size) * var(--cols) / var(--rows));
   
   background-image: repeating-conic-gradient(
-    var(--brand-blue) 0 25%,
-    var(--brand-cream) 0 50%
+    var(--foreground) 0 25%,
+    transparent 0 50%
   );
   background-size: calc(100% / var(--cols)) calc(100% / var(--rows));
 }
@@ -62,18 +62,18 @@
 
 .link {
   text-decoration: none;
-  color: var(--brand-blue);
+  color: var(--foreground);
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .link:hover {
-  color: var(--brand-blue);
+  color: var(--foreground);
   text-decoration: underline;
 }
 
 .active {
   text-decoration: underline;
   font-weight: bold;
-  color: var(--brand-blue);
+  color: var(--foreground);
 }

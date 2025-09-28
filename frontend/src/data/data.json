@@ -1,0 +1,129 @@
+[
+  {
+    "id": "multipack",
+    "name": "Pick Your Own Multipack (3 x 4 Packs)",
+    "price": 57.99,
+    "image": "/products/multipack.webp",
+    "description": "3 x 4 Packs, you choose which flavours you want!\n\nShnack is New Zealand’s first plant-based protein shake — dairy free, low in sugar, and packed with 17g of clean protein per serve. \n\nBuilt to fuel the good life, Shnack keeps you energised for work, workouts, and weekend missions. With no compromise between taste and nutrition, every can delivers smooth flavour and real fuel that works as hard as you do.\n\nReady to grab and go, Shnack makes healthy choices simple, convenient, and delicious."
+  },
+  {
+    "id": "chocolate",
+    "name": "Chocolate Brownie Protein Shake",
+    "price": 19.99,
+    "image": "/products/can-chocolate.webp",
+    "description": "Shnack is New Zealand’s first plant-based protein shake — dairy free, low in sugar, and packed with 17g of clean protein per serve. \n\nBuilt to fuel the good life, Shnack keeps you energised for work, workouts, and weekend missions. With no compromise between taste and nutrition, every can delivers smooth flavour and real fuel that works as hard as you do.\n\nMade with a tasty blend of creamy oat milk and chocolate protein, Shnack makes healthy choices simple, convenient, and delicious.",
+    "nutrition": {
+      "servingsPerPackage": 1,
+      "servingSize": "240ml",
+      "perServe": {
+        "energyKJ": 638,
+        "energyCal": 152,
+        "protein": "17.1 g",
+        "fatTotal": "4.5 g",
+        "fatSaturated": "1.0 g",
+        "carbohydrate": "8.6 g",
+        "sugars": "4.1 g",
+        "dietaryFibre": "2.3 g",
+        "sodium": "327 mg"
+      },
+      "per100ml": {
+        "energyKJ": 266,
+        "energyCal": 64,
+        "protein": "7.1 g",
+        "fatTotal": "1.9 g",
+        "fatSaturated": "0.4 g",
+        "carbohydrate": "3.6 g",
+        "sugars": "1.7 g",
+        "dietaryFibre": "1.0 g",
+        "sodium": "136 mg"
+      }
+    },
+    "ingredients": [
+      "Filtered Water (43.3%)",
+      "Oat Milk (37%) [Water, Oats (10%), Rapeseed Oil, Mineral Salts (340, 170, 341), Salt]",
+      "Second Nature Chocolate protein powder (8.8%) [Pea protein Isolate, Cacao powder, Chocolate dust {Cacao, Coconut sap sugar, Cacao butter}, Monk fruit extract]",
+      "Natural flavours"
+    ]
+  },
+  {
+    "id": "caramel",
+    "name": "Salted Caramel Protein Shake",
+    "price": 19.99,
+    "image": "/products/can-caramel.webp",
+    "description": "Shnack is New Zealand’s first plant-based protein shake — dairy free, low in sugar, and packed with 17g of clean protein per serve. \n\nBuilt to fuel the good life, Shnack keeps you energised for work, workouts, and weekend missions. With no compromise between taste and nutrition, every can delivers smooth flavour and real fuel that works as hard as you do.\n\nMade with a tasty blend of creamy oat milk and salted caramel protein, Shnack makes healthy choices simple, convenient, and delicious.",
+    "nutrition": {
+      "servingsPerPackage": 1,
+      "servingSize": "240ml",
+      "perServe": {
+        "energyKJ": 619,
+        "energyCal": 148,
+        "protein": "16.8 g",
+        "fatTotal": "4.0 g",
+        "fatSaturated": "0.7 g",
+        "carbohydrate": "10.6 g",
+        "sugars": "4.4 g",
+        "dietaryFibre": "1.4 g",
+        "sodium": "327 mg"
+      },
+      "per100ml": {
+        "energyKJ": 258,
+        "energyCal": 62,
+        "protein": "7.0 g",
+        "fatTotal": "1.6 g",
+        "fatSaturated": "0.3 g",
+        "carbohydrate": "4.4 g",
+        "sugars": "1.8 g",
+        "dietaryFibre": "0.6 g",
+        "sodium": "136 mg"
+      }
+    },
+    "ingredients": [
+      "Filtered Water (43.3%)",
+      "Oat Milk (37%) [Water, Oats (10%), Rapeseed Oil, Mineral Salts (340, 170, 341), Salt]",
+      "Second Nature Caramel protein powder (8.8%) [Pea protein Isolate, Caramel flavour, Chocolate dust {Cacao, Coconut sap sugar, Cacao butter}, Monk fruit extract]",
+      "Natural flavours"
+    ]
+  },
+  {
+    "id": "vanilla",
+    "name": "Vanilla Latte Protein Shake",
+    "price": 19.99,
+    "image": "/products/can-vanilla.webp",
+    "description": "Shnack is New Zealand’s first plant-based protein shake — dairy free, low in sugar, and packed with 17g of clean protein per serve. \n\nBuilt to fuel the good life, Shnack keeps you energised for work, workouts, and weekend missions. With no compromise between taste and nutrition, every can delivers smooth flavour and real fuel that works as hard as you do.\n\nMade with a tasty blend of creamy oat milk and vanilla protein, Shnack makes healthy choices simple, convenient, and delicious.",
+    "nutrition": {
+      "servingsPerPackage": 1,
+      "servingSize": "240ml",
+      "perServe": {
+        "energyKJ": 622,
+        "energyCal": 149,
+        "protein": "17.1 g",
+        "fatTotal": "3.8 g",
+        "fatSaturated": "0.7 g",
+        "carbohydrate": "10.8 g",
+        "sugars": "4.2 g",
+        "dietaryFibre": "1.3 g",
+        "sodium": "230 mg",
+        "caffeine": "72 mg"
+      },
+      "per100ml": {
+        "energyKJ": 259,
+        "energyCal": 62,
+        "protein": "7.1 g",
+        "fatTotal": "1.6 g",
+        "fatSaturated": "0.3 g",
+        "carbohydrate": "4.5 g",
+        "sugars": "1.7 g",
+        "dietaryFibre": "0.5 g",
+        "sodium": "96 mg",
+        "caffeine": "30 mg"
+      }
+    },
+    "ingredients": [
+      "Filtered Water (43.3%)",
+      "Oat Milk (37%) [Water, Oats (10%), Rapeseed Oil, Mineral Salts (340, 170, 341), Salt]",
+      "NGT Brewed Coffee (9.5%) [Water, Roasted Coffee Beans (20%)]",
+      "Second Nature Vanilla protein powder (8.8%) [Pea protein Isolate, Natural Vanilla Flavour, Vanilla bean powder, Monk fruit extract]",
+      "Natural flavours"
+    ]
+  }
+]

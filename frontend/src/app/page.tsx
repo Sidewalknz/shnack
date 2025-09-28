@@ -1,17 +1,14 @@
-import Hero from '@/components/Hero';
-import CanHero from '@/components/CanHero';
+import Hero from '../components/Hero';
+import Divider from '../components/Divider';
+import Products from '../components/Products';
 
-export default function Home() {
+export default function Page() {
   return (
-    <main>
-      <Hero
-        title="Shnack"
-        subtitle="But first... a Shnack!"
-        primary={{ href: '/about', label: 'Discover' }}
-        secondary={{ href: '/shop', label: 'Shop' }}
-        right={<CanHero />}
-      />
-      {/* More sections can go here */}
-    </main>
+    <>
+      <Hero />
+      <Divider />
+      <Products />
+      <Divider />
+    </>
   );
 }

@@ -1,101 +1,128 @@
 .hero {
-  /* At least 80% of the viewport; if the navbar is tall, still try to fill the rest */
-  min-height: max(80svh, calc(100svh - var(--nav-h)));
-  background: var(--brand-cream);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;              /* allow children to fill full height */
+  min-height: 80vh;                 /* give the hero more stage */
+  padding: 2rem 2rem 0;              /* no bottom padding so image can touch bottom */
+  background: linear-gradient(135deg, #e5ccb1 0%, #bf9e81 100%);
+  color: var(--foreground);
+  position: relative;
+  overflow: visible;                 /* let the oversized image spill out if needed */
 }
 
-.inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: clamp(16px, 3vw, 32px);
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr; /* copy : can */
-  gap: clamp(16px, 4vw, 40px);
-  align-items: stretch; /* make visual stretch to hero height */
-  height: 100%;
-}
-
-.copy {
+.content {
+  z-index: 2;
+  flex: 1 1 40%;
+  max-width: 680px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.25rem;
-  color: var(--brand-blue);
 }
 
-.title {
-  font-size: clamp(2rem, 5vw, 4rem);
+.content h1 {
+  /* Primary big line */
+  font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1.05;
-  margin: 0;
-  color: var(--brand-blue);
-}
-
-.subtitle {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  margin: 0;
+  font-weight: 800;
   color: var(--foreground);
 }
 
-.btnRow {
-  display: flex;
-  gap: 12px;
-  margin-top: 8px;
+.content h2 {
+  /* Supporting line, smaller than h1 */
+  font-size: clamp(1.125rem, 2.2vw, 1.75rem);
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--product-brown);
+  text-wrap: balance;
 }
 
-.btn {
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  height: 44px;
-  padding: 0 20px;
-  font-weight: 600;
-  border: 2px solid transparent;
-  transition: transform 0.04s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+.cta {
+  width: fit-content;
+  padding: 0.9rem 1.6rem;
+  background: var(--foreground);
+  color: #fff;
+  border: 0;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.2s ease;
+}
+
+.cta:hover { filter: brightness(0.92); }
+.cta:active { transform: translateY(1px) scale(0.99); }
+
+.imageWrapper {
+  position: relative;
+  flex: 1 1 60%;                     /* give the image more space than content */                /* keep it tall */
+  height: auto;
+  overflow: visible;
+}
+
+.image {
+  /* Make it huge but keep proportions and anchor it to the bottom-right */
+  object-fit: contain;               /* maintain aspect ratio */
+  object-position: right bottom;     /* hug the bottom edge */
+  inset: 0 0 0 0;                    /* fill wrapper (Next/Image with fill handles absolute) */
+  pointer-events: none;
+
+  /* Big & bold */
+  transform: scale(1.6);             /* <-- tune this for “waaay bigger” */
+  transform-origin: bottom right;    /* grow from the corner */
   will-change: transform;
 }
 
-.btn:active {
-  transform: translateY(1px);
+/* ==== Responsiveness ==== */
+
+/* Large tablets / smaller laptops */
+@media (max-width: 1200px) {
+  .imageWrapper {
+    flex: 1 1 55%;
+    min-height: 95vh;
+  }
+  .image {
+    transform: scale(1.35);
+  }
 }
 
-.primary {
-  background: var(--brand-blue);
-  color: var(--brand-cream);
-}
-
-.primary:hover {
-  filter: brightness(1.05);
-}
-
-.secondary {
-  background: transparent;
-  color: var(--brand-blue);
-  border-color: var(--brand-blue);
-}
-
-.secondary:hover {
-  background: rgba(28, 61, 118, 0.08); /* brand-blue w/ alpha */
-}
-
-.visual {
-  position: relative;
-  /* Ensure the canvas has vertical room on desktop */
-  min-height: 60svh;
-  height: 100%;
-}
-
-/* Mobile / small screens: stack and give the can some height */
+/* Stack on small screens */
 @media (max-width: 900px) {
-  .inner {
-    grid-template-columns: 1fr;
+  .hero {
+    flex-direction: column;
+    padding: 1.5rem 1rem 0;
   }
-  .copy {
-    text-align: center;
-    align-items: center;
+
+  .content {
+    max-width: none;
+    order: 2;                        /* keep text after the image for drama? flip if you want */
   }
-  .visual {
-    min-height: 50svh;
+
+  .imageWrapper {
+    order: 1;
+    width: 100%;
+    min-height: 60vh;                /* still big on mobile */
+  }
+
+  .image {
+    object-position: center bottom;  /* center it when stacked */
+    transform: scale(1.15);
+  }
+}
+
+/* Very small phones */
+@media (max-width: 520px) {
+  .imageWrapper {
+    min-height: 55vh;
+  }
+  .image {
+    transform: scale(1.05);
+  }
+}
+
+/* Reduce motion preference: disable the big transform */
+@media (prefers-reduced-motion: reduce) {
+  .image {
+    transform: none;
   }
 }
