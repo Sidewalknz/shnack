@@ -18,7 +18,6 @@ type Product = {
 export default function Products() {
   const flavours = (catalog as Product[]).filter(p => p.id !== 'multipack');
 
-  // Reveal on first intersection
   const sectionRef = useRef<HTMLElement | null>(null);
   const [inView, setInView] = useState(false);
 
@@ -28,7 +27,7 @@ export default function Products() {
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setInView(true);   // one-shot
+          setInView(true);
           io.disconnect();
         }
       },
@@ -66,7 +65,6 @@ export default function Products() {
                   priority={i === 1}
                 />
               </div>
-              <span className={styles.label}>{p.name}</span>
             </li>
           ))}
         </ul>
